@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Widget.WidgetApp.AppWidget.Container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.WidgetApp.AppWidgetContainer">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/section_id"
+        style="@style/AppWidgetLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/appwidget_id_label"
+            style="@style/AppWidgetLabel"
+            android:layout_weight="2"
+            android:text="@string/widget_id_label"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/appwidget_id"
+            style="@style/AppWidgetText"
+            android:layout_weight="1"
+            android:text="--"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/section_update"
+        style="@style/AppWidgetLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/section_id"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/AppWidgetLabel"
+            android:layout_marginBottom="2dp"
+            android:text="@string/widget_update_label"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/AppWidgetText"
+            android:id="@+id/appwidget_count"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/AppWidgetText"
+            android:id="@+id/appwidget_update"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_update"
+        style="@style/AppWidgetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/section_update"
+        android:layout_centerHorizontal="true"
+        android:text="Update"/>
+
+</RelativeLayout>
